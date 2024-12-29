@@ -1,6 +1,6 @@
-import { useState } from 'react';
-import { StyleSheet, Button, View, Image, Text } from 'react-native';
-import * as VideoThumbnails from 'expo-video-thumbnails';
+import { useState } from "react";
+import { StyleSheet, Button, View, Image, Text } from "react-native";
+import * as VideoThumbnails from "expo-video-thumbnails";
 
 export default function App() {
   const [image, setImage] = useState(null);
@@ -8,7 +8,7 @@ export default function App() {
   const generateThumbnail = async () => {
     try {
       const { uri } = await VideoThumbnails.getThumbnailAsync(
-        'https://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4',
+        "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
         {
           time: 15000,
         }
@@ -31,9 +31,9 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#F5FCFF",
   },
   image: {
     width: 200,
